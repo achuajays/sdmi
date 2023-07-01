@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+
+
+<h4 class="text-center m-4 bg-primary py-4 alert alert-danger">REGISTRATION</h4>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            <div class="card p-4">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="register" class="btn btn-success">
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+            <a href="{% url 'index'   %}" class="btn btn-danger">BACK</a>
+</div>
+
+
+{% endblock content %}

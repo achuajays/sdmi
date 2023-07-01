@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+<h1>Top Headlines</h1>
+<ul>
+{% for article in articles %}
+    <li>{{ article.title }}</li>
+    <li>{{ article.description }}</li>
+    <li><a href="{{ article.url }}" target="_blank">Read more</a></li>
+{% endfor %}
+</ul>
+
+
+{% endblock content %}

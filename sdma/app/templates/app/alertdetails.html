@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4 m-4 p-4">
+
+            <div class="card">
+                <img src="" alt="" class="card-img-top">
+                
+                <h4 class="text-center">{{ form.title }}</h4>
+                <p class="text-center">{{ form.dis }} </p>
+                <p class="text-center">{{ form.loc }} </p>
+                <p class="text-center">{{ form.ph }} </p>
+                
+                
+                <a href="{% url 'alert' %}" class="btn btn-success">BACK</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

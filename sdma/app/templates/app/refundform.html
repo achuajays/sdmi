@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+<div class="container">
+    <div class="row">
+        {% for s in form %}
+        <div class="col-sm-12">
+            
+
+            <a href="{% url 'updatereffun' s.id %}" class="btn btn-success m-4 p-4">{{ s.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

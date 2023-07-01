@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+
+<h1 class="text-center     alert alert-danger">DISASTER NOTIFICATION</h1>
+<div class="container">
+    <div class="row">
+        {% if form %}
+
+        {% for s in form %}
+            <div class="col-sm-4">
+                <div class="card m-4 bg-secondary">
+                    
+                    <h4 class="text-center">DISASTER => {{ s.title }}</h4>
+                    <h6 class="text-center">LOCATION => {{ s.loc }} </h6>
+                    <h6 class="text-center">TOLL FREE NUMBER  {{ s.ph }} </h6>
+                    <a href="{% url 'update' s.id %}" class="btn btn-success">DETAILS</a>
+                    
+                </div>
+
+            </div>
+        {% endfor%}
+        {% else %}
+        <h4 class="text-center"> NO NEWS AVAILABLE </h4>
+        {% endif %}
+    </div>
+    <hr>
+            <a href="{% url 'index'   %}" class="btn btn-danger">BACK</a>
+</div>
+
+{% endblock content %}

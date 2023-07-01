@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+<h4 class="text-center alert alert-danger m-4 ">INDEX</h4>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-sm-4 p-4">
+
+        </div>
+        <div class="col-sm-4 m-10 bg-secondary p-4">
+            <a href="{% url 'alert' %}" class="btn btn-success p-2 m-2">ALERT</a>
+            <a href="{% url 'em' %}" class="btn btn-danger p-2 m-2">EMERGENCY HELP</a>
+            <a href="{% url 'alertr' %}" class="btn btn-success p-2  m-2">ALERT ADDING (GOVERNMENT LOGIN )</a>
+            <a href="{% url   'logteamr' %}" class="btn btn-success p-2 m-2">EMERGENCY TEAM </a>
+            <a href="{% url 'reffunn' %}" class="btn btn-success p-2 m-2">RELEF FUNDS </a>
+            <a href="{% url 'indexx' %}" class="btn btn-success p-2 m-2">FACT CHECKING </a>
+            <a href="{% url 'esr' %}" class="btn btn-success p-2 m-2">EMERGENCY SHELTER DETAILS </a>
+            <a href="{% url 'foodr' %}" class="btn btn-success p-2 m-2">FOOD ENQURY </a>
+            <a href="{% url 'wastee' %}" class="btn btn-success p-2 m-2">WASTE MANAGMENT </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% block content %}
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+            
+                <img src="https://english.mathrubhumi.com/image/contentid/policy:1.7191558:1663903869/secretariat%20kerala%20(1).jpg?$p=836e0c3&f=16x10&w=856&q=0.8" alt="" class="py-4" height="400px" width="550px">
+                <p class="text-center">{{ form.link }} </p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1 class="text-center alert alert-warning">{{ form.title}}</h1>
+            <p class="text-cente alert alert-success">{{ form.dis }}</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-4">
+            
+            <a href="{% url 'reffunn' %}" class="btn btn-danger"> BACK</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
